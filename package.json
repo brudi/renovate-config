@@ -1,0 +1,37 @@
+{
+  "name": "renovate-config-brudi-community",
+  "version": "1.0.0",
+  "description": "A shared Renovate configuration for brudi Community repositories. ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "github:brudi/renovate-config-brudi-community",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "renovate-config": {
+    "default": {
+      "extends": [
+        ":pinOnlyDevDependencies"
+      ],
+      "semanticCommits": true,
+      "timezone": "Europe/Zurich",
+      "schedule": "every weekend",
+      "rebaseStalePrs": true,
+      "updateNotScheduled": false,
+      "prCreation": "not-pending",
+      "automerge": "minor",
+      "labels": [
+        ":christmas_tree: dependencies"
+      ],
+      "packageRules": [
+        {
+          "packagePatterns": [
+            "brudi"
+          ],
+          "schedule": "at any time"
+        }
+      ]
+    }
+  }
+}
