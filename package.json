@@ -1,5 +1,5 @@
 {
-  "name": "renovate-config-brudi-community",
+  "name": "@brudi/renovate-config",
   "version": "1.0.0",
   "description": "A shared Renovate configuration for brudi Community repositories. ",
   "scripts": {
@@ -7,8 +7,8 @@
   },
   "repository": "github:brudi/renovate-config-brudi-community",
   "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "author": "brudi",
+  "license": "Apache-2",
   "renovate-config": {
     "default": {
       "extends": [
