@@ -1,6 +1,6 @@
 {
   "name": "@brudi/renovate-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A shared Renovate configuration for brudi Community repositories. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,17 +17,20 @@
       "semanticCommits": true,
       "timezone": "Europe/Zurich",
       "schedule": "every weekend",
-      "rebaseStalePrs": true,
-      "updateNotScheduled": false,
-      "prCreation": "not-pending",
-      "automerge": "minor",
+      "automerge": true,
+      "major": {
+        "automerge": false
+      },
+      "prConcurrentLimit": 10,
+      "prHourlyLimit": 30,
       "labels": [
         ":christmas_tree: dependencies"
       ],
       "packageRules": [
         {
+          "groupName": "brudi monorepo",
           "packagePatterns": [
-            "brudi"
+            "@brudi"
           ],
           "schedule": "at any time"
         }
