@@ -1,6 +1,6 @@
 {
   "name": "@brudi/renovate-config",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A shared Renovate configuration for brudi Community repositories. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,21 @@
   "renovate-config": {
     "default": {
       "extends": [
+        ":separateMajorReleases",
+        ":combinePatchMinorReleases",
+        ":ignoreUnstable",
+        ":prImmediately",
+        ":semanticPrefixFixDepsChoreOthers",
+        ":updateNotScheduled",
+        ":automergeDisabled",
+        ":ignoreModulesAndTests",
+        ":autodetectPinVersions",
+        ":prHourlyLimit2",
+        ":prConcurrentLimit20",
+        "group:monorepos",
+        "group:recommended",
+        "helpers:disableTypesNodeMajor",
+        "workarounds:all",
         ":pinOnlyDevDependencies"
       ],
       "semanticCommits": true,
