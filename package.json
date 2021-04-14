@@ -1,6 +1,6 @@
 {
   "name": "@brudi/renovate-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A shared Renovate configuration for brudi Community repositories. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,6 +32,7 @@
       "semanticCommits": true,
       "timezone": "Europe/Zurich",
       "schedule": "every weekend",
+      "updateNotScheduled": false,
       "automerge": true,
       "major": {
         "automerge": false
@@ -39,7 +40,7 @@
       "prConcurrentLimit": 10,
       "prHourlyLimit": 30,
       "labels": [
-        ":christmas_tree: dependencies"
+        "dependencies"
       ],
       "packageRules": [
         {
