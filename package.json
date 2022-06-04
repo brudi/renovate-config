@@ -49,6 +49,17 @@
             "@brudi"
           ],
           "schedule": "at any time"
+        },
+        {
+          "matchDepTypes": [
+            "devDependencies"
+          ],
+          "matchUpdateTypes": [
+            "patch",
+            "minor"
+          ],
+          "groupName": "dev dependencies (non-major)",
+          "groupSlug": "dev-dependencies"
         }
       ]
     }
