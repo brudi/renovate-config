@@ -44,13 +44,6 @@
       ],
       "packageRules": [
         {
-          "groupName": "brudi monorepo",
-          "packagePatterns": [
-            "@brudi"
-          ],
-          "schedule": "at any time"
-        },
-        {
           "matchDepTypes": [
             "devDependencies"
           ],
@@ -60,7 +53,14 @@
           ],
           "groupName": "dev dependencies (non-major)",
           "groupSlug": "dev-dependencies"
-        }
+        },
+        {
+          "groupName": "brudi monorepo",
+          "packagePatterns": [
+            "@brudi"
+          ],
+          "schedule": "at any time"
+        },
       ]
     }
   }
