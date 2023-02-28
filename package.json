@@ -1,6 +1,6 @@
 {
   "name": "@brudi/renovate-config",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A shared Renovate configuration for brudi Community repositories. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,7 @@
         ":combinePatchMinorReleases",
         ":ignoreUnstable",
         ":prImmediately",
+        ":semanticPrefixFixDepsChoreOthers",
         ":updateNotScheduled",
         ":automergeDisabled",
         ":ignoreModulesAndTests",
@@ -28,6 +29,7 @@
         "workarounds:all",
         ":pinOnlyDevDependencies"
       ],
+      "semanticCommits": true,
       "timezone": "Europe/Zurich",
       "schedule": "every weekend",
       "updateNotScheduled": false,
@@ -53,9 +55,32 @@
           "groupSlug": "dev-dependencies"
         },
         {
-          "groupName": "brudi monorepo",
+          "groupName": "AX Suite",
           "packagePatterns": [
-            "@brudi"
+            "@brudi/client",
+            "@brudi/console",
+            "@brudi/id",
+            "@brudi/iot",
+            "@brudi/ops"
+          ],
+          "schedule": "at any time"
+        },
+        {
+          "groupName": "AX react components",
+          "packagePatterns": [
+            "@brudi/react-",
+            "@brudi/ax-global-styles"
+          ],
+          "schedule": "at any time"
+        },
+        {
+          "groupName": "AX",
+          "packagePatterns": [
+            "@brudi",
+            "@brudi/console",
+            "@brudi/id",
+            "@brudi/iot",
+            "@brudi/ops"
           ],
           "schedule": "at any time"
         }
