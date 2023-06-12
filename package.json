@@ -52,16 +52,14 @@
             "@brudi/id",
             "@brudi/iot",
             "@brudi/ops"
-          ],
-          "schedule": "at any time"
+          ]
         },
         {
           "groupName": "AX react components",
           "packagePatterns": [
             "@brudi/react-",
             "@brudi/ax-global-styles"
-          ],
-          "schedule": "at any time"
+          ]
         },
         {
           "matchDepTypes": [
