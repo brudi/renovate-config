@@ -52,14 +52,16 @@
             "@brudi/id",
             "@brudi/iot",
             "@brudi/ops"
-          ]
+          ],
+          "schedule": "every weekend"
         },
         {
           "groupName": "AX react components",
           "packagePatterns": [
             "@brudi/react-",
             "@brudi/ax-global-styles"
-          ]
+          ],
+          "schedule": "every weekend"
         },
         {
           "matchDepTypes": [
@@ -70,7 +72,8 @@
             "minor"
           ],
           "groupName": "dev dependencies (non-major)",
-          "groupSlug": "dev-dependencies"
+          "groupSlug": "dev-dependencies",
+          "schedule": "every weekend"
         }
       ]
     }
