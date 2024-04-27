@@ -25,8 +25,7 @@
         "group:monorepos",
         "group:recommended",
         "helpers:disableTypesNodeMajor",
-        "workarounds:all",
-        ":pinOnlyDevDependencies"
+        "workarounds:all"
       ],
       "semanticCommits": "enabled",
       "timezone": "Europe/Zurich",
@@ -50,9 +49,9 @@
             "@brudi/client",
             "@brudi/id",
             "@brudi/iot",
-            "@brudi/suite-*",
-            "@brudi/graph-*",
-            "@brudi/flow-*"
+            "@brudi/suite-",
+            "@brudi/graph-",
+            "@brudi/flow-"
           ],
           "schedule": "every weekend"
         },
