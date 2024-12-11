@@ -1,6 +1,6 @@
 {
   "name": "@brudi/renovate-config",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "A shared Renovate configuration for brudi Community repositories. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,6 @@
         ":semanticPrefixFixDepsChoreOthers",
         ":automergeDisabled",
         ":ignoreModulesAndTests",
-        ":autodetectPinVersions",
         ":prHourlyLimit2",
         ":prConcurrentLimit20",
         "group:monorepos",
@@ -45,23 +44,23 @@
       "packageRules": [
         {
           "groupName": "AX Suite",
-          "packagePatterns": [
-            "@brudi/client",
-            "@brudi/id",
-            "@brudi/iot",
-            "@brudi/suite-",
-            "@brudi/graph-",
-            "@brudi/flow-"
-          ],
-          "schedule": "every weekend"
+          "schedule": "every weekend",
+          "matchPackageNames": [
+            "/@brudi/client/",
+            "/@brudi/id/",
+            "/@brudi/iot/",
+            "/@brudi/suite-/",
+            "/@brudi/graph-/",
+            "/@brudi/flow-/"
+          ]
         },
         {
           "groupName": "AX react components",
-          "packagePatterns": [
-            "@brudi/react-",
-            "@brudi/ax-global-styles"
-          ],
-          "schedule": "every weekend"
+          "schedule": "every weekend",
+          "matchPackageNames": [
+            "/@brudi/react-/",
+            "/@brudi/ax-global-styles/"
+          ]
         },
         {
           "matchDepTypes": [
