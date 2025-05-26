@@ -46,6 +46,18 @@
       "matchPackageNames": ["/@brudi/react-/", "/@brudi/ax-global-styles/"]
     },
     {
+      "groupSlug": "monorepo:nextjs",
+      "groupName": "nextjs monorepo",
+      "matchPackageNames": [
+        "next",
+        "eslint-config-next",
+        "@next/eslint-plugin-next",
+        "@next/font",
+        "@next/bundle-analyzer",
+        "@next/mdx"
+      ]
+    },
+    {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "dev dependencies (non-major)",
