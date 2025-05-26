@@ -1,0 +1,56 @@
+{
+  "extends": [
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":automergeDisabled",
+    ":ignoreModulesAndTests",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor",
+    "workarounds:all"
+  ],
+  "semanticCommits": "enabled",
+  "timezone": "Europe/Zurich",
+  "schedule": "every weekend",
+  "updateNotScheduled": false,
+  "automerge": true,
+  "rangeStrategy": "bump",
+  "updateInternalDeps": true,
+  "major": {
+    "automerge": false
+  },
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 30,
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "groupName": "AX Suite",
+      "schedule": "every weekend",
+      "matchPackageNames": [
+        "/@brudi/client/",
+        "/@brudi/id/",
+        "/@brudi/iot/",
+        "/@brudi/suite-/",
+        "/@brudi/graph-/",
+        "/@brudi/flow-/"
+      ]
+    },
+    {
+      "groupName": "AX react components",
+      "schedule": "every weekend",
+      "matchPackageNames": ["/@brudi/react-/", "/@brudi/ax-global-styles/"]
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "dev dependencies (non-major)",
+      "groupSlug": "dev-dependencies",
+      "schedule": "every weekend"
+    }
+  ]
+}
